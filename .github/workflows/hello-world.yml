@@ -15,4 +15,5 @@ jobs:
       BRANCH_NAME: ${{ github.ref_name }}
     steps:
       - name: Muestra mensaje 'Hello World'
-        run: echo "Hello World From GitHub with GitHub Actions - branch: $BRANCH_NAME"
+        run: |
+          echo "Hello World From GitHub with GitHub Actions - branch: $BRANCH_NAME"
