@@ -1,4 +1,4 @@
-# 🚀 Nombre del Proyecto
+# 🚀 Aprendiendo Git/GitHub & GitHub Actions
 
 Breve descripción del proyecto. ¿Qué hace? ¿Cuál es su propósito principal? ¿A quién está dirigido?
 
