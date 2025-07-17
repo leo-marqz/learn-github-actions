@@ -1,0 +1,24 @@
+name: WorkFlows List Files
+
+on:
+  workflow_dispatch: #ejecucion manual
+
+jobs: 
+  greet:
+    if: ${{ github.ref_name == 'main' || github.ref_name == 'test' || github.ref_name == 'dev' }}
+    runs-on: ubuntu-latest
+    env:
+      BRANCH_NAME: ${{ github.ref_name }}
+    steps:
+    
+      - name: Muestra mensaje 'Hello World'
+        run: |
+          echo "Hello World From GitHub with GitHub Actions - branch: $BRANCH_NAME"
+          
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+        
+      - name: List Files
+        run: | 
+                echo "El repositorio ${{github.repository}} contiene los siguientes archivos:"
+                tree
