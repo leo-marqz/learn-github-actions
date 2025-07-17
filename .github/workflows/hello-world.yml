@@ -11,6 +11,8 @@ jobs:
   greet:
     if: ${{ github.ref_name == 'main' || github.ref_name == 'test' || github.ref_name == 'dev' }}
     runs-on: ubuntu-latest
+    env:
+      BRANCH_NAME: ${{ github.ref_name }}
     steps:
       - name: Muestra mensaje 'Hello World'
-        run: echo "Hello World From GitHub with GitHub Actions"
+        run: echo "Hello World From GitHub with GitHub Actions - branch: $BRANCH_NAME"
