@@ -9,7 +9,8 @@ on:
 
 jobs: 
   greet:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Muestra mensaje 'Hello World'
-          run: echo "Hello World From GitHub with GitHub Actions"
+    if: ${{ github.ref_name == 'main' || github.ref_name == 'test' || github.ref_name == 'dev' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Muestra mensaje 'Hello World'
+        run: echo "Hello World From GitHub with GitHub Actions"
