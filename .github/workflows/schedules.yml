@@ -2,8 +2,8 @@ name: Programaciones
 
 on: # escucha eventos
 
-  schedule: # programaciones
-    - cron: "*/5 * * * *" # Se ejecuta cada 5 minutos
+  #schedule: # programaciones
+   # - cron: "*/5 * * * *" # Se ejecuta cada 5 minutos
     
   push: # evento push
       branches: # ramas
