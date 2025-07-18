@@ -1,0 +1,1 @@
+Archivo prueba para el actions llamado trigers, el cuando contiene comandos para listar los archivos y se ejecuta cuando se hace un pull request a la rama main.
