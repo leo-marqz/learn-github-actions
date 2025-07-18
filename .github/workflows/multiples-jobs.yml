@@ -19,11 +19,10 @@ jobs:
     steps: 
       - name: Imprime nombre de JOB Windows
         run: echo Job 3
-
   job-dependiente:
     runs-on: ubuntu-latest
     needs: [job-1, job-3]
     steps:
       - name: Imprime nombre de JOB Dependiente
-        run: Job Dependiente
+        run: echo Job Dependiente
     
