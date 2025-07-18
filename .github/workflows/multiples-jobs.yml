@@ -25,5 +25,5 @@ jobs:
     needs: [job-1, job-3]
     steps:
       - name: Imprime nombre de JOB Dependiente
-        run: Job Dependiente 1
+        run: Job Dependiente
     
