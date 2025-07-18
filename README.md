@@ -50,7 +50,7 @@ Incluye aquí capturas de pantalla, gifs o videos mostrando la funcionalidad del
 - [.NET SDK](https://dotnet.microsoft.com/download)
 - [Node.js](https://nodejs.org/)
 - Docker
-- Git
+- Git/Github/GitHub Actions
 - Java JDK (si aplica)
 - Android SDK / Xcode (si aplica)
 
