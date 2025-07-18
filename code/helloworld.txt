@@ -1,0 +1,1 @@
+probando paths en el actions llamado triggers.yml
