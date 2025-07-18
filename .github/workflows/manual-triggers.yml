@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Mostrando los valores de los inputs
         run: |
-                echo "Label ${{ inputs.text }}"
-                echo "Build ${{ inputs.build }}"
+                echo "Label: ${{ inputs.text }}"
+                echo "Build: ${{ inputs.build }}"
           
   
