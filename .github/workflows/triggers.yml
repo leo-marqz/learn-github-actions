@@ -15,7 +15,7 @@ jobs:
   checkout_and_list:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout #Trae todos los archivos del repositorio al runer
+      - name: Checkout - Copia todos los archivos del repositorio al runer
         uses: actions/checkout@v4.2.2
         
       - name: Lista los archivos de mi repositorio
