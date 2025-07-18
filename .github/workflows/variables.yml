@@ -14,6 +14,9 @@ jobs:
     steps:
       - name: step 1 job 1
         run: |
-                echo "Imprimiendo valor de variable global -> ${{ env:variable_global }}"
-                echo "Imprimiendo valor de variable de job -> ${{ env:variable_job }}"
+                echo "Imprimiendo valor de variable global -> ${{ env.variable_global }}"
+                echo "Imprimiendo valor de variable de job -> ${{ env.variable_job }}"
                 echo "Otra forma de obtener el valor de una variable -> $variable_global"
+                echo "Imprimiendo valor de variable step   -> ${{ env.variable_step }}"
+        env:
+          variable_step: Valor de variable step
