@@ -1,0 +1,24 @@
+name: Triggers
+
+on: 
+  pull_request:
+    branches: [main]
+
+jobs:
+
+  greet:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Saludo de bienvenida
+        run: echo "Hello world from GitHub Actions"
+        
+  checkout_and_list:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout #Trae todos los archivos del repositorio al runer
+        uses: actions/checkout@v4.2.2
+        
+      - name: Lista los archivos de mi repositorio
+        run: |
+                echo "El repositorio ${{github.repository}} contiene los siguientes archivos:"
+                tree
