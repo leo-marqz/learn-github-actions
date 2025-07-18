@@ -1,0 +1,16 @@
+name: MATRIZ
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy: 
+      fail-fast: false #falla rapido
+      matrix:
+        operating_system: [windows-latest, ubuntu-latest, macos-latest]
+    name: matriz uni-direccional
+    runs-on: ${{ matrix.operating_system }}
+    steps:
+      - name: Imprimir OS
+        run: echo "Estamos usando el sistema operativo ${{ matrix.operating_system }}"
