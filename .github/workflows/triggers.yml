@@ -3,6 +3,9 @@ name: Triggers
 on: 
   pull_request:
     branches: [main]
+    paths:
+      - 'code/**' # Se ejecutara el script si el pull request viene con cambios en la carpeta code
+      - '.github/workflows/triggers.yml' #Si se modifica este archivo triggers.yml tambien se ejecutara el script.
 
 jobs:
 
