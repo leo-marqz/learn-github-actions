@@ -1,0 +1,18 @@
+name: Trabajando con variables
+
+on:
+  workflow_dispatch:
+
+env:
+  variable_global: Valor de la variable global
+
+jobs:
+  job-1:
+    runs-on: ubuntu-latest
+    env: 
+      varibale_job: Variable con alcance a nivel de job
+    steps:
+      - name: step 1 job 1
+        run: |
+                echo "Imprimiendo valor de variable global -> ${{ variable_global }}"
+                echo "Imprimiendo valor de variable de job -> ${{ variable_job }}"
