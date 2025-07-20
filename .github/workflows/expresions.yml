@@ -1,0 +1,22 @@
+name: Expresiones
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix: 
+        operating_system: [windows-latest, macos-latest, ubuntu-latest]
+    name: matriz-unidimensional
+    runs-on: ${{ matrix.operating_system }}
+    steps:
+      - name: STEP For Windows
+        if: ${{ matrix.operating_system == 'windows-latest' }}
+        run: echo "Esto solo se ejecuta en el sistema operativo windows"
+
+      - name: STEP For ALL
+        run: |
+                echo "Script ejecutado por todos los sistemas operativos: ${{ matrix.operating_system }}"
+  
