@@ -14,3 +14,13 @@ jobs:
       - name: Obteniendo valor del paso anterior
         run: |
                 echo "valor de variable: ${{ steps.genera-valor.outputs.MI_VALOR }}"
+      - name: Enmascarando un valor
+        id: enmascara
+        run: |
+                valor_secreto='::crack::night::'
+                echo "::add-mask::$valor_secreto"
+                echo "VALOR_SECRETO=$valor_secreto" >> "GITHUB_OUTPUT"
+    
+      - name: Obtener el valor secreto
+        run: |
+                 echo "Intentado imprimir valor secreto: ${{ steps.enmascara.outputs.VALOR_SECRETO }}"
