@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v4.2.2
 
       - name: Configurando variable de ambiente 
-        run: echo "MI_VARIABLE='::crack::night::' " >> "$GITHUB_OUTPUT"
+        run: echo "MI_VARIABLE='::crack::night::' " >> $GITHUB_ENV
 
       - name: Ejecuta archivo de Javascript con NodeJS
         run: node main.js
